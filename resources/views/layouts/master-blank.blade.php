@@ -17,6 +17,7 @@
     <title>@yield('title') - Auth</title>
     @include('include.head')
     <link rel="icon" href="{{ asset('/assets/img/public/logo.png') }}" type="image/png">
+    @stack('style')
 </head>
 
 <body>

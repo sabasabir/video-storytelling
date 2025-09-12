@@ -103,7 +103,7 @@ input.error {
     border: 1px solid #f00;
 }
 
-.btn {
+.btn-primary {
     width: 100%;
     padding: 12px;
     background: #001f3f;
@@ -116,8 +116,9 @@ input.error {
     transition: background 0.3s ease;
 }
 
-.btn:hover {
+.btn-primary:hover {
     background: #003366;
+    color: #ccc;
 }
 
 .extra-text {
@@ -136,6 +137,8 @@ input.error {
 .extra-text a:hover {
     text-decoration: underline;
 }
+
+
 
 /* -------------------------------- PAGE - DASHBOARD----------------------------- */
 

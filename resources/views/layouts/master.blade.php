@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>@yield('title') - PMYLP</title>
+    <title>@yield('title') - StoryTelling</title>
     <link rel="icon" href="{{ asset('/assets/img/public/logo.png') }}" type="image/png">
     @include('include.head')
     @yield('style')

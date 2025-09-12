@@ -29,9 +29,15 @@ Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallba
 
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard.index');
-})->middleware('auth')->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard.index');
+// })->middleware('auth')->name('dashboard');
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard.index');
+    })->name('dashboard');
+});
 
 
 
@@ -42,4 +48,3 @@ Route::post('password/email', [ForgotPasswordController::class, 'sendResetLinkEm
 
 Route::get('password/reset/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
 Route::post('password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
-

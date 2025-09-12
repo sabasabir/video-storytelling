@@ -74,8 +74,20 @@
       }
 
       function submitformRequest(form) {
+          const loader = form.querySelector(".loader");
+          const check = form.querySelector(".check");
+
           // prepare data
           const formData = new FormData(form);
+          loader.classList.add('active');
+          loader.addEventListener(
+              "animationend",
+              function() {
+                  check.classList.add("active");
+              }, {
+                  once: true
+              }
+          );
           fetch(form.action, {
                   method: form.method,
                   body: formData,

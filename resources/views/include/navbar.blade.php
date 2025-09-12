@@ -16,11 +16,11 @@
             id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="{{ asset('/assets/img//default.png') }}" alt="profile" width="40" height="40"
                 class="rounded-circle me-2">
-            <span>Ahsan Danish</span>
+            <span>{{auth()->user()->full_name}}</span>
         </a>
         <ul class="dropdown-menu dropdown-menu-end shadow">
             <li>
-                <h6 class="dropdown-header">Welcome, Ahsan</h6>
+                <h6 class="dropdown-header">Welcome, {{auth()->user()->first_name}}</h6>
             </li>
             <li><a class="dropdown-item" href="#">Change Password</a></li>
             <li>

@@ -43,13 +43,13 @@ class AuthController extends Controller
         ]);
 
         // Auto-login after registration (optional)
-        Auth::login($user);
+        // Auth::login($user);
 
         // If AJAX request → return JSON
         if ($request->ajax()) {
             return response()->json([
                 'success'  => true,
-                'redirect' => route('dashboard'),
+                'redirect' => route('login'),
                 'message'  => 'Registration successful.',
             ]);
         }

@@ -36,7 +36,7 @@
                         <input type="email" name="email" value="{{ old('email') }}" class="required" />
                     </div>
 
-                    <button type="submit" class="btn">Send Reset Link</button>
+                    <button type="submit" class="btn btn-primary">Send Reset Link</button>
 
                     <p class="extra-text">
                         Remembered your password?

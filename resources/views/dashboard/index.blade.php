@@ -1,5 +1,6 @@
 <!-- Main Dashboard -->
 @extends('layouts.master')
+@section('title', 'Dashboard')
 @section('content')
 <main>
     <h1 class="dashboard-title">Dashboard</h1>

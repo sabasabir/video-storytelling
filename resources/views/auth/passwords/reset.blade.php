@@ -25,7 +25,7 @@
     <label for="password_confirmation">Confirm Password</label>
     <input type="password" placeholder="Confirm Password" name="password_confirmation">
 
-    <button type="submit">Reset Password</button>
+    <button type="submit" class="btn btn-primary">Reset Password</button>
 
     <div class="extra-links">
         <a href="{{ route('login') }}">Back to Login</a>

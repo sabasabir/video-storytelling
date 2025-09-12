@@ -43,15 +43,17 @@
                     <div class="text-end mb-2">
                         <a href="{{ route('password.request') }}">Forgot Password?</a>
                     </div>
-                    <button type="submit" class="btn">Login</button>
-                    <div class="text-center mt-3">
-                                OR
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    
+                    {{-- <div class="text-center mt-3">
+                        OR
                     </div>
                     <div class="text-center mt-3">
                         <a href="{{ route('google.login') }}" class="btn btn-danger w-100">
                             <i class="bi bi-google"></i> Login with Google
                         </a>
-                    </div>
+                    </div> --}}
+                    @include('include.formloader')
 
                     <p class="extra-text">
                         Don't have an account?
@@ -114,7 +116,8 @@
                         </select>
                     </div>
 
-                    <button type="submit" class="btn">Sign Up</button>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                    @include('include.formloader')
 
                     <p class="extra-text">
                         Already have an account?
@@ -124,6 +127,7 @@
 
             </div>
         </div>
+
     </div>
 @endsection
 @push('scripts')
