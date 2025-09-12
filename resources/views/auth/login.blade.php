@@ -38,12 +38,20 @@
                         <label>Password</label>
 
                         <input type="password" id="login-password" name="password" class="required" />
-                        
+
                     </div>
                     <div class="text-end mb-2">
-                          <a href="{{ route('password.request') }}">Forgot Password?</a>
+                        <a href="{{ route('password.request') }}">Forgot Password?</a>
                     </div>
                     <button type="submit" class="btn">Login</button>
+                    <div class="text-center mt-3">
+                                OR
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="{{ route('google.login') }}" class="btn btn-danger w-100">
+                            <i class="bi bi-google"></i> Login with Google
+                        </a>
+                    </div>
 
                     <p class="extra-text">
                         Don't have an account?
