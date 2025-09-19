@@ -10,7 +10,7 @@
     <title>@yield('title') - StoryTelling</title>
     <link rel="icon" href="{{ asset('/assets/img/public/logo.png') }}" type="image/png">
     @include('include.head')
-    @yield('style')
+    @stack('style')
 </head>
 
 <body class="bg-light">

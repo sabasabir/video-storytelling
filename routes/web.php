@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Auth\GoogleController;
+use App\Http\Controllers\VideoController;
 
 Route::get('/', function () {
     if (Auth::check()) {
@@ -30,15 +31,9 @@ Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallba
 
 
 Route::middleware('auth:sanctum')->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard.index');
-    })->name('dashboard');
-
-
-
-
-
-    
+    Route::get('/dashboard', [VideoController::class, 'index'])->name('dashboard');
+    Route::post('/videos', [VideoController::class, 'store'])->name('videos.store');
+    Route::delete('/videos/{video}', [VideoController::class, 'destroy'])->name('videos.destroy');
 });
 
 
