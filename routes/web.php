@@ -29,14 +29,16 @@ Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallba
 
 
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard.index');
-// })->middleware('auth')->name('dashboard');
-
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard.index');
     })->name('dashboard');
+
+
+
+
+
+    
 });
 
 

@@ -12,7 +12,7 @@ a {
 }
 
 .form-outer-container {
-    background: url("/assets/img/bg.png") no-repeat center center fixed; /* background image */
+ 
     background-size: cover; /* make it cover the whole container */
     background-color: #d6e6fd; /* fallback color */
     display: flex;
