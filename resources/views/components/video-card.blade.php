@@ -1,23 +1,26 @@
+@props(['video'])
 <div class="video-card">
-    <div class="video-thumbnail">
-        <div class="status {{ $video->status }}">{{ ucfirst($video->status) }}</div>
-        
-        <video width="100%" controls>
-            <source src="{{ asset('storage/' . $video->file_path) }}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <div class="video-thumbnail-wrapper" data-video-id="{{ $video->id }}">
+        <img class="video-thumb"
+             src="{{ asset('storage/'.$video->thumbnail) }}"
+             alt="{{ $video->title }}">
+        <button class="play-btn">
+            ▶
+        </button>
+    </div>
 
-        <button class="menu-btn" onclick="toggleMenu(this)">⋮</button>
-        <div class="menu-options">
-            <button onclick="deleteVideo({{ $video->id }})">Delete</button>
-        </div>
+    <div class="video-player d-none" id="player-{{ $video->id }}">
+        <video class="plyr__video-embed" playsinline preload="metadata">
+            <source src="{{ route('videos.stream', $video->id) }}" type="video/mp4" />
+        </video>
     </div>
 
     <div class="video-details">
         <div class="video-title">{{ $video->title }}</div>
         <div class="video-meta">
-            <span>📅 {{ $video->created_at->format('M d, Y') }}</span>
-            <span>💾 {{ number_format($video->size / 1048576, 2) }} MB</span>
+           <div> 👁 0 views</div>
+           <div> 📅 {{ $video->created_at->format('m/d/Y') }}</div>
+            <div> 💾 {{ number_format($video->size / 1048576, 2) }} MB</div>
         </div>
     </div>
 </div>

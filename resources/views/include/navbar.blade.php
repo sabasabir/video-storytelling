@@ -5,8 +5,8 @@
 
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link text-dark" href="#">Upload</a></li>
-            <li class="nav-item"><a class="nav-link text-dark" href="#">My Videos</a></li>
+            <li class="nav-item"><a class="nav-link text-dark" onclick="switchTab('upload')" href="javascript:void(0)">Upload</a></li>
+            <li class="nav-item"><a class="nav-link text-dark" onclick="switchTab('videos')" href="javascript:void(0)">My Videos</a></li>
         </ul>
     </div>
 

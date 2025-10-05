@@ -34,6 +34,9 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/dashboard', [VideoController::class, 'index'])->name('dashboard');
     Route::post('/videos', [VideoController::class, 'store'])->name('videos.store');
     Route::delete('/videos/{video}', [VideoController::class, 'destroy'])->name('videos.destroy');
+    Route::get('/videos/{video}/stream', [VideoController::class, 'stream'])->name('videos.stream');
+    Route::post('/videos/chunks', [VideoController::class, 'uploadChunk'])->name('videos.chunks');
+    Route::post('/videos/{video}/thumbnail', [VideoController::class, 'storeThumbnail']);
 });
 
 
