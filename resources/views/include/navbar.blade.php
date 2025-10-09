@@ -22,7 +22,7 @@
             <li>
                 <h6 class="dropdown-header">Welcome, {{auth()->user()->first_name}}</h6>
             </li>
-            <li><a class="dropdown-item" href="#">Change Password</a></li>
+            <li><a class="dropdown-item" href="{{route('password.change')}}">Change Password</a></li>
             <li>
                 <hr class="dropdown-divider">
             </li>

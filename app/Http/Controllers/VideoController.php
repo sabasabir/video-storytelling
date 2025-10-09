@@ -161,7 +161,6 @@ class VideoController extends Controller
             'Accept-Ranges' => 'bytes',
             'Cache-Control' => 'private, max-age=3600',
         ];
-
         // Handle Range header for seeking
         if ($request->headers->has('range')) {
             $range = $request->header('range');

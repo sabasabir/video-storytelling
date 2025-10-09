@@ -37,6 +37,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/videos/{video}/stream', [VideoController::class, 'stream'])->name('videos.stream');
     Route::post('/videos/chunks', [VideoController::class, 'uploadChunk'])->name('videos.chunks');
     Route::post('/videos/{video}/thumbnail', [VideoController::class, 'storeThumbnail']);
+
+    Route::match(['get', 'post'], '/change-password', [AuthController::class, 'changePassword'])->name('password.change');
 });
 
 
